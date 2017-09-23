@@ -19,7 +19,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   array = false
   WIN_COMBINATIONS.each do |combo|
-    array << combo if position_taken?(board, combo[0]) && board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
+    array = combo if position_taken?(board, combo[0]) && board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
   end
   array
 end
